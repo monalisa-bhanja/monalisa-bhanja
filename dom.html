@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Javascript Page</title>
+</head>
+<body>
+
+    <h1>Value: <span id="value">0</span></h1>
+    
+
+    <button id="incrementButton">Increment</button>
+This Increment Button will increase the value by 1 but not exceed from 20.<br>
+<h1>Value: <span id="val">0</span></h1>
+<button id="decrementButton">Decrement</button>
+This Decrement Button will decrease the value but it will not decrease less than 0.<br>
+<h1>Value: <span id="valu">0</span></h1>
+    <button id="reset-button">Reset</button>
+    Reset Button will make Zero when clicked.
+    <script>
+      
+      const incrementButton = document.getElementById("incrementButton");
+      const valueDisplay = document.getElementById("value");
+      
+      
+      let value = 0;
+     
+
+      
+      incrementButton.addEventListener("click", function () {
+       
+        value++;
+
+       
+        if (value > 20) {
+          value = 20;
+        }
+
+       
+        valueDisplay.textContent = value;
+
+        const changeColorButton = document.getElementById("incrementButton");
+        function changeBackgroundColor() {
+    
+     const randomColor ="#" + Math.floor(Math.random()*16777215).toString(16);//generate random color
+     
+
+    document.body.style.backgroundColor = randomColor;
+}
+
+changeColorButton.addEventListener("click", changeBackgroundColor);
+
+
+      });
+      const decrementButton = document.getElementById("decrementButton");
+      const valueDisplay1 = document.getElementById("val");
+
+      let val = 6;
+      decrementButton.addEventListener("click", function () {
+       
+        val--;
+
+       
+        if (val < 0) {s
+          val = 0;
+        }
+
+       
+        valueDisplay1.textContent = val;
+        const changeColorButton = document.getElementById("decrementButton");
+        function changeBackgroundColor() {
+    
+    const randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
+
+    
+    document.body.style.backgroundColor = randomColor;
+}
+
+changeColorButton.addEventListener("click", changeBackgroundColor);
+      });
+      const ResetButton = document.getElementById("reset-button");
+      const valueDisplay2 = document.getElementById("value");
+      const valueDisplay3 = document.getElementById("val");
+
+
+      let valu = 0;
+      ResetButton.addEventListener("click", function () {
+       
+       
+
+        value =0;
+       val=6;
+        valueDisplay2.textContent = valu;
+        valueDisplay3.textContent = valu;
+        
+      });
+      
+
+    
+       
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+</body>
+</html>
